@@ -1,0 +1,15 @@
+
+:root{
+    --color1: #93a7da;
+    --color2: #dca3c5;
+    --color3 : #e5c6b9;
+    --color4: #eaeacc;
+    --color5: #ebf0f0;
+    } 
+    
+.colorFondo{
+
+    background-color: #eaeacc;
+    height: 100px;
+   
+}
