@@ -1,15 +1,24 @@
-
-:root{
-    --color1: #93a7da;
-    --color2: #dca3c5;
-    --color3 : #e5c6b9;
-    --color4: #eaeacc;
-    --color5: #ebf0f0;
-    } 
-    
 .colorFondo{
+ background-color: var(--fucsiamedio);
+}
+.colorTexto{
+    color: rgb(239, 236, 236);
+    font-family: "Caveat";
+    font-weight: 700;
+    font-style: normal;
+}
+.colorTexto2{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 499;
+}
+.colorTexto2:hover{
+ color: var(--fucsiaclaro);
+}
 
-    background-color: #eaeacc;
-    height: 100px;
-   
+.colorItems:hover{
+    background-color:var( --fucsiaclaro);
+}
+.colorSearch:hover{
+    background-color:var( --fucsiaclaro);   
 }

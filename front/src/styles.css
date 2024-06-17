@@ -1,2 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
- 
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+:root{
+ --fuciaoscuro: #c2167c; 
+ --fucsiaclaro:#e68fc3;
+ --fucsiamedio: #db1487;
+ --grisoscuro:#484848;
+ --grisclaro:#898d8c;
+ --grisMasClaro:#e2e2e2;
+
+
+}
+.footer-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.colorFooter{
+    background-color: var(--grisMasClaro);
+    
+    }
+    .colorTextoF{
+           color: black;
+           font-family: "Caveat";
+           font-weight: 700;
+           font-style: normal;
+       }
+.logoFooter {
+   
+    height: 180px;
+    width: 190px; 
+    margin-left: 40px;
+   
+}    
+
+
+

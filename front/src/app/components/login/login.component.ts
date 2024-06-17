@@ -6,11 +6,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { JwtHelperService } from '@auth0/angular-jwt';
+import { ToastrService } from 'ngx-toastr';
 import { Credential } from '../../interfaces/credential';
 import { LoginService } from '../../services/login.service';
-
-const jwtHelperService = new JwtHelperService();
 
 @Component({
   selector: 'app-login',
@@ -21,6 +19,7 @@ const jwtHelperService = new JwtHelperService();
 })
 export class LoginComponent {
   router = inject(Router);
+  toastrService = inject(ToastrService);
   loginService: LoginService = inject(LoginService);
 
   credentialsForm = new FormGroup({
@@ -39,12 +38,16 @@ export class LoginComponent {
           password,
         };
         this.loginService.login(credential).subscribe((response: any) => {
-          localStorage.setItem('token', response.datos);
-          this.router.navigateByUrl('/shop');
+          if (response.resultado === 'bien') {
+            localStorage.setItem('token', response.datos);
+            this.router.navigateByUrl('/shop');
+          } else {
+            this.toastrService.warning('Invalid credentials');
+          }
         });
       }
     } else {
-      console.log('Error: invalid form');
+      this.toastrService.warning('All fields are required');
     }
   }
 }

@@ -1,5 +1,14 @@
-.footer-container{
+/*.footer-container{
     position: absolute;
     bottom: 0;
     width: 100%;
 }
+.colorFooter{
+    background-color: var(--fucsiaclaro);
+    }
+    .colorTextoF{
+           color: black;
+           font-family: "Caveat";
+           font-weight: 700;
+           font-style: normal;
+       }*/

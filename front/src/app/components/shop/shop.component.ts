@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { LoginService } from '../../services/login.service';
 
 @Component({
@@ -9,23 +10,24 @@ import { LoginService } from '../../services/login.service';
   styleUrl: './shop.component.css',
 })
 export class ShopComponent {
+  toastrService = inject(ToastrService);
   loginService = inject(LoginService);
 
-  nombre: string = '';
+  name: string = '';
+
   ngOnInit() {
     const token: any = localStorage.getItem('token');
-    console.log('token: ', token);
     if (token) {
       this.loginService.validateToken(token).subscribe((response: any) => {
-        console.log('response: ', response);
         if (response.resultado === 'bien') {
-          this.nombre = response.datos.name;
+          this.name = response.datos.name;
+          this.toastrService.success(`Hello, ${this.name}!`);
         } else {
-          console.log('el token no es válido...');
+          this.loginService.logout();
         }
       });
     } else {
-      console.log('no existe token...');
+      this.loginService.logout();
     }
   }
 }

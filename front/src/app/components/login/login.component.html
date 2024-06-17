@@ -3,14 +3,14 @@
     <input type="password" placeholder="Password" formControlName="password" />
     <input type="submit" value="Log In" />
   </form>-->
-
-  <div class="d-lg-flex justify-content-center">
+  <div >
+  <div class="d-lg-flex justify-content-center class= ancho">
     <form
       [formGroup]="credentialsForm"
       (ngSubmit)="handleSubmit()"
       class="py-5 col-lg-6"
     >
-      <div class="mb-3">
+      <div class="mb-3 ">
         <label for="inputEmail" class="form-label">Username</label>
         <input
           type="email"
@@ -20,7 +20,7 @@
           formControlName="username"
         />
       </div>
-      <div class="mb-3">
+      <div class="mb-3 ">
         <label for="inputPassword" class="form-label">Password</label>
         <input
           type="password"
@@ -29,9 +29,11 @@
           formControlName="password"
         />
       </div>
-      <button type="submit" class="btn bg-success-subtle col-12">
+      <button type="submit" class="btn bg-secondary-subtle col-12">
         Log In
       </button>
     </form>
   </div>
+  <img src="../../../assets/multimedia/imagenlogin..png " alt="">
   
+</div>
