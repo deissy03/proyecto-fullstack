@@ -4,36 +4,47 @@
     <input type="submit" value="Log In" />
   </form>-->
   <div >
-  <div class="d-lg-flex justify-content-center class= ancho">
-    <form
-      [formGroup]="credentialsForm"
-      (ngSubmit)="handleSubmit()"
-      class="py-5 col-lg-6"
-    >
-      <div class="mb-3 ">
-        <label for="inputEmail" class="form-label">Username</label>
-        <input
-          type="email"
-          class="form-control"
-          id="inputEmail"
-          aria-describedby="emailHelp"
-          formControlName="username"
-        />
+    <div class="container text-center ancho">
+      
+      <div class="row">
+        <div class="col-6">
+          <div class="position-absolute top-50 start-0 ">
+            <img class="tamanoImagen "src = "../../../assets/multimedia/imagenlogin..png " alt="">
+          </div>
+        </div>
+        <div class="col-6">
+          <form
+          [formGroup]="credentialsForm"
+          (ngSubmit)="handleSubmit()"
+          class="py-5 col-lg-6"
+        >
+          <div class="mb-3 ">
+            <label for="inputEmail" class="form-label">Username</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail"
+              aria-describedby="emailHelp"
+              formControlName="username"
+            />
+          </div>
+          <div class="mb-3 ">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              formControlName="password"
+            />
+          </div>
+          <button type="submit" class="btn bg-secondary-subtle col-12">
+            Log In
+          </button>
+        </form>
+        </div>
       </div>
-      <div class="mb-3 ">
-        <label for="inputPassword" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="inputPassword"
-          formControlName="password"
-        />
-      </div>
-      <button type="submit" class="btn bg-secondary-subtle col-12">
-        Log In
-      </button>
-    </form>
-  </div>
-  <img src="../../../assets/multimedia/imagenlogin..png " alt="">
+    </div>
   
-</div>
+ 
+   
+  

@@ -9,11 +9,12 @@
     width: 280px;
     margin-left: 390px;
 }
-.contenedor-carrusel{
+/*.contenedor-carrusel{
     display: flex;
     flex-direction: column;
+    height: 500px;
 
-}
+}*/
 .colorAcordion{
     background-color: var(--fucsiaclaro);
 }
@@ -27,4 +28,8 @@
 }
 .colorTexto{
     color: var(--fuciaoscuro);  
+}
+.tamanoCarrusel{
+    height: 400px;
+
 }
