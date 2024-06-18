@@ -10,12 +10,13 @@
 
 
 }
-.footer-container{
+/*.footer-container{
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 200px;
-}
+    padding: 10px;
+}*/
 .colorFooter{
     background-color: var(--grisMasClaro);
     
@@ -41,6 +42,13 @@
     position: absolute;
     justify-content: right;
     
+}
+.texto{
+    font-size:12px ;
+}
+.tamanoFooter{
+    height: 200px;
+   
 }
 
 

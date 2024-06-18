@@ -3,22 +3,25 @@
     <input type="password" placeholder="Password" formControlName="password" />
     <input type="submit" value="Log In" />
   </form>-->
+
   <div >
-    <div class="container text-center ancho">
-      
-      <div class="row">
-        <div class="col-6">
-          <div class="position-absolute top-50 start-0 ">
+
+    <div class="container  ancho">
+      <h1>Inicia sesión para realizar tus compras </h1>
+      <div class="row ">
+        <div class="col-6 border border-5">
+          <!--<div class="position-absolute top-50 start-0 ">-->
             <img class="tamanoImagen "src = "../../../assets/multimedia/imagenlogin..png " alt="">
-          </div>
+         <!-- </div>-->
         </div>
-        <div class="col-6">
+        <div class="col-6 border border-5">
           <form
           [formGroup]="credentialsForm"
           (ngSubmit)="handleSubmit()"
-          class="py-5 col-lg-6"
+         
         >
           <div class="mb-3 ">
+            <h2>Acceso</h2>
             <label for="inputEmail" class="form-label">Username</label>
             <input
               type="email"
@@ -26,6 +29,7 @@
               id="inputEmail"
               aria-describedby="emailHelp"
               formControlName="username"
+              placeholder="Enter your Username"
             />
           </div>
           <div class="mb-3 ">
@@ -35,11 +39,15 @@
               class="form-control"
               id="inputPassword"
               formControlName="password"
+              placeholder="Enter your Password"
             />
           </div>
           <button type="submit" class="btn bg-secondary-subtle col-12">
             Log In
           </button>
+          <div class="links text-center ">
+            <a href="#"> You don't have an account at the Windsor?</a>
+          </div>
         </form>
         </div>
       </div>
