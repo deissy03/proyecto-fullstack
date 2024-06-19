@@ -3,7 +3,7 @@
    
     background-color: var(--fucsiaclaro);
    padding-top: 50px;
-    width: 100%;
+    width: 50%;
    margin-top: 50px;
    padding-bottom: 90px;
   
@@ -12,11 +12,11 @@
     
 }
 .tamanoImagen{
-    width: 300px;
-    height: 280px;
+    width: 480px;
+    height: 270px;
     align-items: center;
     display: flex;
-   /* margin-left: 480px;*/
+   padding-left: 180px;
 }
 
 form{

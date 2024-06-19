@@ -1,4 +1,5 @@
 import multer from 'multer';
+import fs from 'fs-extra';
 import ModeloProducto from "../modelos/modeloProducto.js";
 
 const ControladorProductos = {
@@ -27,16 +28,13 @@ const ControladorProductos = {
             color: solicitud.body.color,
             disponibilidad: solicitud.body.disponibilidad,
             fechaIngreso: solicitud.body.fechaIngreso,
-            imagen: {
-              data: solicitud.file.filename,
-              contentType: 'image/png',
-            },
+            imagen: solicitud.file.filename,
           });
           const ProductosCreada = await nuevaProductos.save();
           if (ProductosCreada._id) {
             respuesta.json({
               resultado: 'bien',
-              mensaje: 'Productos creada',
+              mensaje: 'Producto creado',
               datos: ProductosCreada._id,
             });
           }
@@ -52,12 +50,14 @@ const ControladorProductos = {
   },
   leerProducto: async (solicitud, respuesta) => {
     try {
+      const ProductoEncontrado = await ModeloProducto.findById(solicitud.params.id);
+      if (ProductoEncontrado._id) {
       respuesta.json({
         resultado: 'bien',
         mensaje: 'Producto leído',
-        datos: null,
+        datos: ProductoEncontrado,
       });
-    
+      }
     } catch (error) {
       respuesta.json({
         resultado: 'mal',
@@ -68,10 +68,11 @@ const ControladorProductos = {
   },
   leerProductos: async (solicitud, respuesta) => {
     try {
+      const todosLosProductos = await ModeloProducto.find();
       respuesta.json({
         resultado: 'bien',
         mensaje: 'Productos leídos',
-        datos: null,
+        datos: todosLosProductos,
       });
      
     } catch (error) {
@@ -84,25 +85,32 @@ const ControladorProductos = {
   },
   actualizarProducto: async (solicitud, respuesta) => {
     try {
-      respuesta.json({
+      const ProductoActualizado = await ModeloProducto.findByIdAndUpdate(
+        solicitud.params.id,solicitud.body
+      );
+      if (ProductoActualizado._id) {
+        respuesta.json({
         resultado: 'bien',
-        mensaje: 'Productos actualizados',
-        datos: null,
+        mensaje: 'Producto actualizado',
+        datos: ProductoActualizado._id,
       });
-  
+    }
     } catch (error) {
       respuesta.json({
         resultado: 'mal',
-        mensaje: 'ocurrió un error al actualizar Productos',
+        mensaje: 'ocurrió un error al actualizar Producto',
         datos: error,
       });
     }
   },
   eliminarProducto: async (solicitud, respuesta) => {
     try {
+      const ProductoEliminada = await ModeloProducto.findByIdAndDelete(
+        solicitud.params.id
+      );
       respuesta.json({
         resultado: 'bien',
-        mensaje: 'Productos eliminado',
+        mensaje: 'Producto eliminado',
         datos: null,
       });
      

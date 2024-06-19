@@ -1,3 +1,4 @@
+import path from "path";
 import express from "express";  
 import morgan from"morgan";
 import cors from "cors";
@@ -13,7 +14,7 @@ servidor.use(express.json());
 servidor.use('/productos',enrutadorProductos);
 servidor.use('/usuarios',enrutadorUsuarios);
 servidor.use('/inicio-sesion',enrutadorInicioSesion);
-
+servidor.use('/imagenes', express.static(path.resolve(`imagnes`)));
 
 
 servidor.get('/', (solicitud, respuesta) => {

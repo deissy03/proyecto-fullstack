@@ -9,7 +9,7 @@ const esquemaProducto = new Schema({
     color:{ type: String, required: true },
     disponibilidad:{ type: Boolean, required: true },
     fechaIngreso:{ type: Date, required: true },
-    imagen:{date: Buffer, contentType:String},
+    imagen:{type: String, required: true},
 },
  { versionKey: false, timestamps: true }
   );
