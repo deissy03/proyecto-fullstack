@@ -50,5 +50,10 @@
     height: 200px;
    
 }
-
-
+.toast-warning{
+ background-color:var(--grisclaro)
+ 
+}
+.toast-success{
+ background-color:var(--grisclaro);
+}

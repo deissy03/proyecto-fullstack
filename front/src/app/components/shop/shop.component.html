@@ -1,2 +1,18 @@
 <p>shop works!</p>
 
+<main class="container d-flex flex-wrap justify-content-center gap-5">
+  <p *ngFor="let item of a">
+
+    {{ item.modelo }} - {{ item.marca }} - {{ item.precio | currency }}
+  </p>
+  <div *ngFor="let item of a">
+    <div class="card">
+        <img src="{{item.imagen}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.marca}}</h5>
+          <p class="card-text">{{item.precio}}</p>
+          <a href="#" class="btn btn-primary">Gcomprar</a>
+        </div>
+      </div>
+  </div>
+</main>

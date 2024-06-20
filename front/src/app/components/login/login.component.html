@@ -3,18 +3,19 @@
     <input type="password" placeholder="Password" formControlName="password" />
     <input type="submit" value="Log In" />
   </form>-->
-
-  <div >
+ 
 
     <div class="container  ancho">
       <h1>Inicia sesión para realizar tus compras </h1>
       <div class="row ">
-        <div class="col-6 border border-5">
-          <!--<div class="position-absolute top-50 start-0 ">-->
-            <img class="tamanoImagen "src = "../../../assets/multimedia/imagenlogin..png " alt="">
-         <!-- </div>-->
+        <div class="col border border-5">
+        <div class="flex-container">
+          <div class="imagen">
+          <img src = "../../../assets/multimedia/imagenlogin..png " alt="">
+          </div>
         </div>
-        <div class="col-6 border border-5">
+      </div>
+        <div class="col border border-5">
           <form
           [formGroup]="credentialsForm"
           (ngSubmit)="handleSubmit()"
@@ -42,11 +43,11 @@
               placeholder="Enter your Password"
             />
           </div>
-          <button type="submit" class="btn bg-secondary-subtle col-12">
+          <button type="submit" class=" colorBoton col-12">
             Log In
           </button>
           <div class="links text-center ">
-            <a href="#"> You don't have an account at the Windsor?</a>
+            <a routerLink="create">Create_acount</a>
           </div>
         </form>
         </div>

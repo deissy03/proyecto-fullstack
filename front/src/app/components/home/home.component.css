@@ -1,6 +1,6 @@
 .imagen-total{
     width: 100%;
-    height: 980px;
+    height: 100%;
     position: relative;
     margin-bottom: 30px;
 }
@@ -32,4 +32,44 @@
 .tamanoCarrusel{
     height: 400px;
 
+}
+@media (max-width:375px) {
+.textoTitulo{
+    font-size: 12px;
+}
+.texto2{
+    font-size: 15px;
+}
+.titulo1{
+ font-size: 15px;
+}
+.titulo2{
+    font-size: 13px;
+}
+.titulo3{
+    font-size: 11px;
+}
+.texto3{
+    font-size: 15.6px;
+}
+}
+@media (max-width:768px){
+    .textoTitulo{
+        font-size: 12px;
+    }
+    .texto2{
+        font-size: 14.8px;
+    }
+    .titulo1{
+     font-size: 25px;
+    }
+    .titulo2{
+        font-size: 23px;
+    }
+    .titulo3{
+        font-size: 21px;
+    }
+    .texto3{
+        font-size: 15.6px;
+    }   
 }
