@@ -1,6 +1,5 @@
-<p>shop works!</p>
 
-<main class="container d-flex flex-wrap justify-content-center gap-5">
+<!--<main class="container d-flex flex-wrap justify-content-center gap-5">
   <p *ngFor="let item of a">
 
     {{ item.modelo }} - {{ item.marca }} - {{ item.precio | currency }}
@@ -15,4 +14,45 @@
         </div>
       </div>
   </div>
-</main>
+</main>-->
+
+  <!-- <div class="card">
+    <img src="http://localhost:3000/imagenes/" {{ item.imagen }}
+    class="card-img-top"
+    alt="imagen de una {{ item.marca }} "
+  />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.marca }}</h5>
+      <p class="card-text">Color: {{item.color}} </p>
+      <p class="card-text">Material: {{item.material}} </p>
+      <h3 class="card-text">Precio: {{item.precio}} </h3>
+
+      <a href="#" class="btn btn-primary">Add to card</a>
+    </div>
+  </div> -->
+  
+  <div class="container text-center">
+    <div class="row ">
+      <div class="col-md-3 "*ngFor="let item of a">
+        <div class="card">
+           
+            <img
+              src="http://localhost:3000/imagenes/{{ item.imagen }}"
+              class="card-img-top"
+              alt="imagen de una {{ item.modelo }} {{ item.color }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ item.marca }}</h5>
+                <p class="card-text">Color: {{item.color}} </p>
+                <p class="card-text">Material: {{item.material}} </p>
+                <h3 class="card-text">Precio: {{item.precio}} </h3>
+                <a href="#" class="btn btn-primary">Add to card</a>
+            </div>
+          </div>
+        </div> 
+     </div>
+  </div>
+    
+   
+ 
+      

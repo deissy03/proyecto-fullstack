@@ -16,8 +16,20 @@ import { Ejemplo } from '../../model/ejemplo';
 export class ShopComponent {
   toastrService = inject(ToastrService);
   loginService = inject(LoginService);
+  //dataService=inject(DataService);
   name: string = '';
   a: Ejemplo[] = [];
+  /*_id: string = '';
+  modelo: string = '';
+  marca: string = '';
+  material: string = '';
+  precio: number = 0;
+  color: string = '';
+  disponibilidad: boolean = true;
+  fechaIngreso: Date = new Date();
+  imagen: string = '';
+  createdAt: Date = new Date();
+  updatedAt: Date = new Date();*/
   constructor(private dataService: DataService) {}
 
   /*obtenerTodosLosDatos(){
@@ -32,7 +44,7 @@ export class ShopComponent {
     })
   }*/
   async ngOnInit() {
-    /*const token: any = localStorage.getItem('token');
+    const token: any = localStorage.getItem('token');
     if (token) {
       this.loginService.validateToken(token).subscribe((response: any) => {
         if (response.resultado === 'bien') {
@@ -46,7 +58,7 @@ export class ShopComponent {
       this.loginService.logout();
     }
     //ngOgInit de obtener los datos//
-    this.obtenerTodosLosDatos();*/
+    //this.obtenerTodosLosDatos();
 
     this.a = await this.dataService.getDatos();
     // console.log('LLega ', a);
