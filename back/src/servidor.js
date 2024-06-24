@@ -14,7 +14,7 @@ servidor.use(express.json());
 servidor.use('/productos',enrutadorProductos);
 servidor.use('/usuarios',enrutadorUsuarios);
 servidor.use('/inicio-sesion',enrutadorInicioSesion);
-servidor.use('/imagenes', express.static(path.resolve(`imagnes`)));
+servidor.use('/imagenes', express.static(path.resolve(`imagenes`)));
 
 
 servidor.get('/', (solicitud, respuesta) => {
