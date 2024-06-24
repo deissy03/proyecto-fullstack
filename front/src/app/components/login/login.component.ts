@@ -32,7 +32,7 @@ export class LoginComponent {
       const username = this.credentialsForm.value.username;
       const password = this.credentialsForm.value.password;
 
-      if (typeof username === 'string' && typeof password === 'string') {
+      if (typeof username === 'string'&& typeof password === 'string') {
         const credential: Credential = {
           username,
           password,

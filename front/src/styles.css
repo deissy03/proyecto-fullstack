@@ -57,3 +57,6 @@
 .toast-success{
  background-color:var(--grisclaro);
 }
+.toast-info{
+    background-color:var(--grisclaro);  
+}

@@ -14,15 +14,18 @@ export class LoginService {
   router = inject(Router);
 
   API_URL = 'http://localhost:3000/inicio-sesion';
-
+ //maneja inicio de sesion
   login(credential: Credential) {
     return this.httpClient.post(this.API_URL, credential);
   }
-
+ 
   validateToken(token: string) {
     return this.httpClient.get(`${this.API_URL}/${token}`);
   }
-
+//maneja creacion de usuario
+ signup(credential:Credential){
+  return this.httpClient.post(this.API_URL, credential );
+ }
   isLogin() {
     if (localStorage.getItem('token')) {
       return true;
@@ -32,7 +35,7 @@ export class LoginService {
   }
 
   logout() {
-    this.toastrService.info('Bye!');
+    this.toastrService.info('thanks for visiting us');
     localStorage.removeItem('token');
     this.router.navigate(['/']);
   }

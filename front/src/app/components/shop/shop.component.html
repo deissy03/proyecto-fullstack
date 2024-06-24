@@ -31,28 +31,31 @@
     </div>
   </div> -->
   
-  <div class="container text-center">
+  <div class="container text-center ">
     <div class="row ">
-      <div class="col-md-3 "*ngFor="let item of a">
-        <div class="card">
+     <div class="col-md-4 "*ngFor="let item of productos">
+        <div class="card border border-danger">
            
             <img
               src="http://localhost:3000/imagenes/{{ item.imagen }}"
-              class="card-img-top"
-              alt="imagen de una {{ item.modelo }} {{ item.color }}"
+              class="card-img-top "
+              alt="imagen {{ item.modelo }} {{ item.color }}"
             />
-            <div class="card-body">
+            <div class="card-body gap-5 border border-danger ">
               <h5 class="card-title">{{ item.marca }}</h5>
+               <h4 class="card-text"> {{item.modelo}} </h4>
                 <p class="card-text">Color: {{item.color}} </p>
-                <p class="card-text">Material: {{item.material}} </p>
-                <h3 class="card-text">Precio: {{item.precio}} </h3>
-                <a href="#" class="btn btn-primary">Add to card</a>
+                <h3 class="card-text">{{item.material}} </h3>
+                <h5 class="card-text">${{item.precio}} </h5>
+                <a href="#" class="btn btn-secondary ">Add to car</a>
             </div>
           </div>
         </div> 
      </div>
   </div>
-    
+
+
+
    
  
       
