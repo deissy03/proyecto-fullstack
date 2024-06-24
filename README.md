@@ -1,6 +1,6 @@
 # PROYECTO -FullStack front y back 
- ### cree un APIS de productos de bolsos y una de usuarios para la creacion de la parte front y el back .
- ## Consiste en crear un formulario y permitir que el usuario pueda registrarse, esta seria la parte pública y  obtener mi API de productos que es de bolsos desde la parte me la base de datos que la tenemos en moongoBD 
+ ### cree un APIS de productos "bolsos" y una de usuarios para la creacion de la parte front y el back.
+ El usuario podrá ingresar(si esta en la base de datos) o registrase desde un formulario y quedar almacenado en la base de datos para poder visualizar la tienda en la página shop.
 ## Pasos de elaboración:
 ## BACKEND
 * * Después de crear el repositorio en github y sincronzarlo en el local iniciamos documentación.

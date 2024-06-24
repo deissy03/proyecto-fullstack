@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import {
   ReactiveFormsModule,
+  FormControl,
   FormGroup,
   FormBuilder,
   Validators,
@@ -13,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-create-account',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule,],
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css'],
 })
@@ -47,7 +48,7 @@ export class CreateComponent {
               console.log('User created successfully:', response.datos);
               this.registrationSuccess = true;
               this.toastrservice.success(
-                '¡Usuario creado exitosamente!'
+                '¡Bienvenida a Bolsos JEZE!'
               );
               this.privateRouter.navigate(['/shop']);
             } else {

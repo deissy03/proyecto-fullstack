@@ -11,14 +11,15 @@ interface UserData {
  @Injectable({
    providedIn: 'root'
  })
- export class CreateService {
-   constructor(private http: HttpClient) {}
+  export class CreateService {
+    constructor(private http: HttpClient) {}
  
-   crearUsuario(userData: UserData) {
-     const apiUrl = 'http://localhost:3000/usuarios'; 
-     return this.http.post<any>(apiUrl, userData);
-   }
- }
+
+    crearUsuario(userData: UserData) {
+      const apiUrl = 'http://localhost:3000/usuarios'; 
+      return this.http.post<any>(apiUrl, userData);
+    }
+  }
 
 /*@Injectable({
   providedIn: 'root'
