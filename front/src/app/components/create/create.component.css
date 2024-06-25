@@ -47,6 +47,9 @@
  h1{
      text-align: center;
  }
+ .btn:hover{
+    background-color:var( --fuciaoscuro); 
+ }
  @media (max-width:375px){
      .ancho{
        

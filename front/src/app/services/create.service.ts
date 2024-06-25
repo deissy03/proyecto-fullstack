@@ -1,27 +1,121 @@
-import { Injectable, inject} from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+@Injectable({
+  providedIn: 'root'
+})
+export class CreateService {
 
-interface UserData {
-  nombre: string;
-  correoElectronico: string;
-  contrasenia: string;
- }
- 
- @Injectable({
-   providedIn: 'root'
- })
-  export class CreateService {
-    constructor(private http: HttpClient) {}
- 
+  constructor() { }
+  httpClient = inject(HttpClient);
+  API_URL = 'http://localhost:3000/usuarios';
 
-    crearUsuario(userData: UserData) {
-      const apiUrl = 'http://localhost:3000/usuarios'; 
-      return this.http.post<any>(apiUrl, userData);
+  /*createUser(nombre:string,correoElectronico:string,contrasenia:string){
+    const formData = new FormData();
+    formData.append('nombre', nombre);
+    formData.append('correoElectronico', correoElectronico);
+    formData.append('contrasenia', contrasenia);
+    return this.httpClient.post(this.API_URL,formData);
+    
+  }*/
+    createUser(nombre: string, correoElectronico: string, contrasenia: string) {
+      const user = {
+        nombre,
+        correoElectronico,
+        contrasenia
+      };
+  
+      return this.httpClient.post(this.API_URL, user, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
     }
-  }
 
-/*@Injectable({
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  import { Injectable, inject} from '@angular/core';
+//  import { HttpClient } from '@angular/common/http';
+
+
+//  interface UserData {
+//    nombre: string;
+//    correoElectronico: string;
+//    contrasenia: string;
+//   }
+ 
+//   @Injectable({
+//     providedIn: 'root'
+//   })
+//    export class CreateService {
+//      constructor(private http: HttpClient) {}
+ 
+
+//      crearUsuario(userData: UserData) {
+//        const apiUrl = 'http://localhost:3000/usuarios'; 
+//        return this.http.post<any>(apiUrl, userData);
+//      }
+//    }
+
+
+
+
+
+
+
+// import { Injectable, inject } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class CreateService {
+
+//   constructor() { }
+//   httpClient = inject(HttpClient);
+//   API_URL = 'http://localhost:3000/usuarios';
+
+//   crearUsuario(nombre:string,correoElectronico:string,contrasenia:string){
+//     const formData = new FormData();
+//     formData.append('nombre', nombre);
+//     formData.append('correoElectronico', correoElectronico);
+//     formData.append('contrasenia', contrasenia);
+//     return this.httpClient.post(this.API_URL,formData);
+    
+//   }
+// }
+
+
+
+
+
+
+/*otroooo @Injectable({
   providedIn: 'root'
 })
 export class CreateService {
