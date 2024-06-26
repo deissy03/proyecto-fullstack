@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { LoginService } from '../../services/login.service';
 import { CreateService } from '../../services/create.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-create',
   standalone: true,
@@ -12,6 +12,11 @@ import { CreateService } from '../../services/create.service';
   styleUrl: './create.component.css'
 })
 export class CreateComponent {
+  constructor(private router: Router) { }
+  redirectToOtraPagina() {
+    this.router.navigate(['/login']);
+  }
+
   toastrService = inject(ToastrService);
   loginService = inject(LoginService);
   createService = inject(CreateService);
@@ -22,11 +27,6 @@ export class CreateComponent {
   contrasenia:string = "";
 
   handleSubmit(){
-    /*console.log('...handleSubmit...');
-    console.log(this.nombre);
-    console.log(this.correoElectronico);
-    console.log(this.contrasenia);*/
-
     if(this.nombre){
       this.createService.createUser(
         this.nombre,
@@ -36,9 +36,20 @@ export class CreateComponent {
         console.log("response:", response);
       })
     }
+    this.redirectToOtraPagina();
   }
-
 }
+
+
+
+ 
+
+
+
+
+
+
+
 
 
 

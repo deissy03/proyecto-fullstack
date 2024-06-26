@@ -1,5 +1,5 @@
 export class Ejemplo {
- 
+  _id: string = '';
   modelo: string = '';
   marca: string = '';
   material: string = '';
@@ -7,5 +7,7 @@ export class Ejemplo {
   color: string = '';
   disponibilidad: boolean = true;
   fechaIngreso: Date = new Date();
-  imagen: File | null = null;
+  imagen: string = '';
+  createdAt: Date = new Date();
+  updatedAt: Date = new Date();
 }

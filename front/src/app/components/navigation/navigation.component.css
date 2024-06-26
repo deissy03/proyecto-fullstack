@@ -1,4 +1,9 @@
 .colorFondo{
+ position: fixed;
+ top:0;
+ left: 0;
+ width: 100%;
+ z-index: 10;
  background-color: var(--fucsiamedio);
 }
 .colorTexto{
@@ -6,11 +11,13 @@
     font-family: "Caveat";
     font-weight: 700;
     font-style: normal;
+    font-size: 30px;
 }
 .colorTexto2{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 499;
+    font-size: 20px;
 }
 .colorTexto2:hover{
  color: var(--fucsiaclaro);
