@@ -23,6 +23,16 @@ color:var(--fuciaoscuro);
 .btn:hover{ 
     background-color:var(--fuciaoscuro);
    }
+.btn-cart{
+    background-color:var( --grisclaro);
+    color:white;
+    height: 30px;
+   
+   }
+   .btn-cart:hover{
+    background-color:var( --fucsiaclaro);
+    color:white;
+   }
 @media (max-width:375px) {
     .card{
         padding-bottom: 15px;

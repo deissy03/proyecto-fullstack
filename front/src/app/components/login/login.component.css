@@ -1,23 +1,18 @@
-
 .ancho{
-   
    background-color: var(--fucsiaclaro);
    padding-top: 50px;
    width: 50%;
    margin-top: 150px;
    padding-bottom: 90px;
+   color:var(--grisoscuro)
    
 }
 .colorBoton{
     background-color: var(--grisMasClaro);
+    height: 40px;
+   
 }
-/*.tamanoImagen{
-    width: 480px;
-    height: 270px;
-    align-items: center;
-    display: flex;
-   padding-left: 180px;
-}*/
+
 .flex-container{
 display: flex;
 align-items: center;
@@ -35,6 +30,12 @@ form{
 display: flex;
 flex-direction: column;
 }
+.colorBoton{
+    background-color: var(--grisclaro);
+}
+.colorBoton:hover{
+    background-color:var( --fuciaoscuro); 
+}
 a{
     text-decoration: none;
     color: black;
@@ -47,6 +48,10 @@ a:hover{
 }
 h1{
     text-align: center;
+}
+.links{
+    height:40px ;
+    padding: 30px;
 }
 @media (max-width:375px){
     .ancho{

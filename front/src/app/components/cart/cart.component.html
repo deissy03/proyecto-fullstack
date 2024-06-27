@@ -2,7 +2,7 @@
     <h2>Carrito de compras</h2>
     <div class="productos-seleccionados">
       <div *ngFor="let item of productosSeleccionados; let i = index">
-        <div class="card">
+        <div class="card-imagenes">
           <img
             src="http://localhost:3000/imagenes/{{ item.imagen }}"
             class="card-img-top tamanoImagen"
@@ -14,15 +14,18 @@
             <h4 class="card-text">
               Precio: {{ item.precio | currency : "COP" : "$" }}
             </h4>
-            <button (click)="eliminarProductoDelCarrito(i)">Eliminar</button>
+            <button (click)="eliminarProductoDelCarrito(i)" class= "botonelimnar">Eliminar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <br>
   <div class="total">
     <h3>Total: {{ totalCompra | currency : "COP" : "$" }}</h3>
   </div>
-  
-  <button (click)="vaciarCarrito()">Vaciar carrito</button>
-  <button (click)="comprar()">Comprar</button>
+  <div class="botones">  
+  <button (click)="vaciarCarrito()"class= "botonvaciar">Vaciar carrito</button>
+  <button (click)="agregarCarrito()"class= "botonagregar">Agregar al Carrito</button>
+  <button (click)="comprar()"class= "botoncomprar">Comprar</button>
+</div>

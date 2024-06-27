@@ -1,5 +1,5 @@
 .ancho{
-   
+    color:var(--grisoscuro);
     background-color: var(--fucsiaclaro);
     padding-top: 50px;
     width: 50%;
@@ -8,15 +8,9 @@
       
  }
  .colorBoton{
-     background-color: var(--grisMasClaro);
+     background-color: var(--grisclaro);
  }
- /*.tamanoImagen{
-     width: 480px;
-     height: 270px;
-     align-items: center;
-     display: flex;
-    padding-left: 180px;
- }*/
+
  .flex-container{
  display: flex;
  align-items: center;

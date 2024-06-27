@@ -3,7 +3,8 @@ import { Ejemplo } from '../../model/ejemplo';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'ngx-localstorage';
-
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-cart',
   standalone: true,
@@ -17,7 +18,10 @@ export class CartComponent implements OnInit {
  constructor(
   private activatedRoute: ActivatedRoute,
   private localStorageService: LocalStorageService,
+  private router: Router,
+  private toastr: ToastrService,
  ){}
+ 
 // implemnetamos la traida de los datos del modelo con ngOnInit, se crea una constante que se llame idproducto para que reciba los productos por su id y reciba un solo producto
  ngOnInit(){
   const idProducto= this.activatedRoute.snapshot.queryParams["producto"];
@@ -66,16 +70,20 @@ export class CartComponent implements OnInit {
   try{
     this.localStorageService.remove('carrito');
     this.totalCompra=0;
+   
   }catch(error){
     console.log("error al eliminar el carrito",error);
    } 
  }
+ agregarCarrito() {
+  this.router.navigate(['/shop']);
+}
  comprar(){
-  alert("¡compra existosa!");
-  this.vaciarCarrito();
- }
+  this.toastr.success('¡Compra exitosa!', 'BOLSOS_JEZE');
+}
  calcularTotalCompra(){
   this.totalCompra=this.productosSeleccionados.reduce((acomulador,producto)=>acomulador + producto.precio,0);
  }
+ 
  }
 

@@ -1,4 +1,70 @@
 .tamanoImagen{
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px; 
 }
+.card-imagenes{
+    text-align: center;
+    padding: 20px;
+   
+ 
+}
+.total{
+    text-align: center;
+    color: var(--fuciaoscuro);   
+}
+.botones{
+    text-align: center;
+    height: 50px;
+   
+}
+.card-body{
+color: var(--fuciaoscuro); 
+}
+.botonelimnar{
+background-color: var(--grisMasClaro);
+}
+.botonelimnar:hover{
+background-color: var(--fuciaoscuro);
+}
+.botonvaciar{
+background-color: rgb(228, 200, 212);
+font-size: 20px;
+}
+.botonvaciar:hover{
+    background-color: var(--fuciaoscuro);
+    } 
+ .botonagregar{
+background-color: rgb(231, 201, 201);
+font-size: 20px;
+}
+.botonagregar:hover{
+    background-color: var(--fuciaoscuro);
+    } 
+.botoncomprar{
+background-color: rgb(210, 157, 164);
+font-size: 20px;
+}
+.botoncomprar:hover{
+    background-color: var(--fuciaoscuro);
+    } 
+    @media (max-width:375px){
+ h3{
+    font-size: 15px;
+ }
+ h4{
+    font-size: 15px;
+ }
+ .botonvaciar{
+   font-size: 13px; 
+   
+ }
+ .botonagregar{
+    font-size: 13px; 
+    
+  }
+  .botoncomprar{
+    font-size: 13px; 
+    
+  }
+  
+    }
