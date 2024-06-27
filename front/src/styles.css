@@ -56,3 +56,11 @@
 .toast-info{
     background-color:var(--grisclaro);  
 }
+@media (max-width:375px){
+    .toast-success{
+       
+        height: 70px;
+    }
+
+
+}

@@ -1,12 +1,30 @@
+.carrito{
+  margin-top: 150px;
+}
+h1{
+  color: var(--fuciaoscuro);
+  text-align: center;
+}
+.medida{
+  width: 80%;
+  height: 100%;
+  position: relative;
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+ 
+ 
+}
 .tamanoImagen{
-    width: 160px;
-    height: 160px; 
+    width: 200px;
+    height: 200px; 
 }
 .card-imagenes{
     text-align: center;
     padding: 20px;
-   
- 
+}
+.borde{
+  border: 3px solid var(--fuciaoscuro);
 }
 .total{
     text-align: center;
@@ -19,6 +37,9 @@
 }
 .card-body{
 color: var(--fuciaoscuro); 
+}
+.card-precio{
+color:var(--grisoscuro);
 }
 .botonelimnar{
 background-color: var(--grisMasClaro);
@@ -66,5 +87,25 @@ font-size: 20px;
     font-size: 13px; 
     
   }
-  
+  .medida{
+    width: 100%;
+    height: 80%;
+    margin-top: 50px;
+    text-align: center;
+   
+  }
+}
+  @media (max-width:768px){
+    .medida{
+      width: 100%;
+      height: 80%;
+      margin-top: 50px;
+      text-align: center;
+      margin-right: 120px;
+     
     }
+
+
+
+  }
+    
