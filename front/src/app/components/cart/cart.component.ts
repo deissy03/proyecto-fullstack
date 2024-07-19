@@ -79,9 +79,10 @@ export class CartComponent implements OnInit {
   this.router.navigate(['/shop']);
 }
  comprar(){
- 
+  this.router.navigate(['/comprar']);
   this.toastr.success('¡Compra exitosa!', 'BOLSOS_JEZE');
   return this.vaciarCarrito();
+ 
 }
  calcularTotalCompra(){
   this.totalCompra=this.productosSeleccionados.reduce((acomulador,producto)=>acomulador + producto.precio,0);

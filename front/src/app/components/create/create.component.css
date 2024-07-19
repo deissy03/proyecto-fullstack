@@ -1,6 +1,12 @@
+.body{
+    background-color: var(--grisFondo);
+}
+.row {
+    background-color: var(--crema);
+}
+
 .ancho{
-    color:var(--grisoscuro);
-    background-color: var(--fucsiaclaro);
+    background-color:#a7aaa7;
     padding-top: 50px;
     width: 50%;
     margin-top: 150px;
@@ -9,6 +15,7 @@
  }
  .colorBoton{
      background-color: var(--grisclaro);
+     font-size: 18px;
  }
 
  .flex-container{
@@ -33,10 +40,6 @@
      color: black;
      font-size: 16px;
      
- }
- a:hover{
-    background-color:var( --fuciaoscuro); 
-    color:white;
  }
  h1{
      text-align: center;

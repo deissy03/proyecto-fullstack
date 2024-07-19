@@ -1,0 +1,53 @@
+.medios-de-pago{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    margin-left: 300px;
+    color: var(--cafeMedio);
+}
+.qr{
+    height: 200px;
+    width: 200px;
+}
+.qrnequi{
+    height: 220px;
+    width: 220px;
+}
+.logo{
+    height: 150px;
+    width: 200px;
+}
+.logobm{
+    height: 150px;
+    width: 240px;
+}
+.logob{
+    height: 200px;
+    width: 240px;
+}
+.ingresa{
+   
+   margin-right: 700px;
+    color: var(--cafeMedio);
+    font-size: 25px;
+}
+.ingresa2{
+   
+    margin-right: 980px;
+     color: var(--cafeMedio);
+     font-size: 25px;
+ }
+.container{
+    margin-bottom: 100px;
+}
+.WhatsApp1{
+    position: relative;
+   margin-left: 320px;
+   margin-top: 0;
+    height: 200px;
+    width: 200px;
+ 
+} 
+.iconos2{
+    height: 90px;
+    width: 80px;
+} 

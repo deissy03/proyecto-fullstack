@@ -1,5 +1,10 @@
+
+.row {
+    background-color: var(--crema);
+}
+
 .ancho{
-   background-color: var(--fucsiaclaro);
+   background-color:#a7aaa7;
    padding-top: 50px;
    width: 50%;
    margin-top: 150px;
@@ -32,26 +37,35 @@ flex-direction: column;
 }
 .colorBoton{
     background-color: var(--grisclaro);
+    font-size: 18px;
 }
 .colorBoton:hover{
-    background-color:var( --fuciaoscuro); 
+    background-color:var(--grisMasClaro); 
 }
 a{
     text-decoration: none;
-    color: black;
-    font-size: 16px;
+    color: rgb(13, 12, 12);
+    font-size: 18px;
     
 }
-a:hover{
-   background-color:var( --fuciaoscuro); 
-   color:white;
-}
+
 h1{
     text-align: center;
+    color: black;
+}
+h2{
+    color: black;  
 }
 .links{
-    height:40px ;
-    padding: 30px;
+    height:30px;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    background-color: rgb(211, 134, 82);
+    
+}
+.links:hover{
+ background-color: rgb(236, 196, 141);
 }
 @media (max-width:375px){
     .ancho{

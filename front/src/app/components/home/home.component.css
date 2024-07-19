@@ -3,23 +3,66 @@
     height: 100%;
     position: relative;
     margin-bottom: 30px;
+    margin-top: 90px;
+}
+.card-header{
+    background-color:#dadeda;
+}
+h2{
+    color: #a66e45;
+}
+h4{
+    color: #a66e45;
+}
+.card{
+    background-color:#dadeda; 
+    padding-bottom: 1px;
+  
+}
+.card-body {
+    background-color:#ded0b7 ;
+    
+}
+.card-text{
+    font-size: 19px;
 }
 .imagenes{
     height:470px;
     width: 280px;
     margin-left: 390px;
 }
-
+.textoTitulo{
+ font-size: 20px;
+}
+.titulo2{
+    font-size: 25px;
+}
+.titulo3{
+    font-size: 30px;
+}
 .colorAcordion{
-    background-color: var(--fucsiaclaro);
+    background-color: #a66e45;
 }
 .bordeAcordion{
-    border-radius: var(--fucsiaclaro);
+    border-radius: #422518;
     
 }
 .colorFondo{
-    background-color: var(--grisoscuro);
+    background-color:#ded0b7;
    
+}
+button{
+    height: 50px;
+    width: 245px;
+    margin-left: 20px;
+    color:#a66e45;
+    background-color:#ded0b7;
+    padding: 10px;
+}
+button:hover{
+ background-color: #a66e45;
+ color:rgb(237, 234, 234);
+ 
 }
 .buy-now-container{
     position: relative;
@@ -30,19 +73,20 @@
 .buy-now-button{
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
-    background-color:var(--fucsiaclaro) ;
+    padding: 10px 10px ;
+    background-color:#a66e45 ;
     color:rgb(19, 18, 18);
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     font-size: 24px;
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
+    margin: 10px;
 }
 .buy-now-button:hover{
-    background-color:var(--fuciaoscuro);
-    box-shadow: 0 0 10px var(--fuciaoscuro), 0 0 40px var(--fuciaoscuro), 0 0 80px var(--fuciaoscuro);
-    color:white;
+    background-color:var(--grisClaro);
+    box-shadow: 0 0 10px var(--grisoscuro), 0 0 40px var(--grisoscuro), 0 0 80px var(--grisoscuro);
+    color:rgb(26, 25, 25);
 }
 .arrow-animation{
     position: absolute;
@@ -51,7 +95,6 @@
     transform: translateY(-50%);
     height: 30px;
     width: 70px;
-    color: var(--fucsiaclaro);
     z-index: 1;
 }
 @keyframes arrow-move{
@@ -70,10 +113,10 @@
 }
 
 .colorLink{
- color: var(--fuciaoscuro);
+ color: var(--grisclaroro);
 }
 .colorTexto{
-    color: var(--fuciaoscuro);  
+    color: var(--grisclaro);  
 }
 .tamanoCarrusel{
     height: 400px;

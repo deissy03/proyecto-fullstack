@@ -1,9 +1,12 @@
-.carrito{
-  margin-top: 150px;
+.carritolleno{
+  height: 190px;
+  width: 120px;
+
 }
 h1{
   color: var(--fuciaoscuro);
   text-align: center;
+  padding-top: 90px;
 }
 .medida{
   width: 80%;
@@ -41,32 +44,33 @@ color: var(--fuciaoscuro);
 .card-precio{
 color:var(--grisoscuro);
 }
-.botonelimnar{
+.botoneliminar{
 background-color: var(--grisMasClaro);
 }
-.botonelimnar:hover{
-background-color: var(--fuciaoscuro);
+.botoneliminar:hover{
+background-color: var(--crema);
 }
 .botonvaciar{
-background-color: rgb(228, 200, 212);
+background-color: rgb(225, 180, 151);
 font-size: 20px;
 }
 .botonvaciar:hover{
-    background-color: var(--fuciaoscuro);
+    background-color: var(--grisMasClaro);
     } 
  .botonagregar{
-background-color: rgb(231, 201, 201);
+background-color: rgb(218, 151, 95);
 font-size: 20px;
 }
 .botonagregar:hover{
-    background-color: var(--fuciaoscuro);
+    background-color: var(--grisMasClaro);
     } 
 .botoncomprar{
-background-color: rgb(210, 157, 164);
+background-color: rgb(168, 142, 111);
 font-size: 20px;
+
 }
 .botoncomprar:hover{
-    background-color: var(--fuciaoscuro);
+    background-color: var(--grisMasClaro);
     } 
     @media (max-width:375px){
  h3{
