@@ -8,7 +8,7 @@ export class CreateService {
 
   constructor() { }
   httpClient = inject(HttpClient);
-  API_URL = 'http://localhost:3000/usuarios';
+  API_URL = 'http://3.133.98.196:3000/usuarios';
 
   /*createUser(nombre:string,correoElectronico:string,contrasenia:string){
     const formData = new FormData();

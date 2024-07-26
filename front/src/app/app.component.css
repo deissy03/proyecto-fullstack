@@ -1,0 +1,138 @@
+.cardFooter {
+    background-color: #F0F0F0;
+  }
+  .logoFooter {
+    height: 100px;
+    width: 100px;
+    position:absolute;
+    margin-top: 25px;
+    margin-inline-start: -45px;
+} 
+.iconos2{
+    height: 30px;
+    width: 30px;
+   
+}
+.tamanoFooter{
+    height: 100px; 
+}
+  
+  .card-body {
+    padding: 0;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .alineacionItens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .texto {
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #a66e45;
+  }
+
+  
+   .iconos2{
+    margin-top: 120px;
+    padding: 5px;
+    
+   }
+  
+  .card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  .colorFooter{
+    height: 200px;
+    width: 99%;
+    background-color: var(--crema);
+   }
+   h5{
+    color: #a66e45;
+   }
+   h6{
+    color: #a66e45;
+   }
+
+@media (max-width:768px){
+    .colorFooter{
+        height: 200px;
+        width: 100%;
+        background-color: var(--crema);
+    }
+
+    .logoFooter {
+        height: 90px;
+        width: 90px;
+        position:absolute;
+        margin-top: 10px;
+        margin-inline-start: -38px;
+    }
+
+    .texto {
+        margin-bottom: 1px;
+        font-size: 14px;
+    }
+
+    .iconos2{
+        margin-top: 95px;
+        padding: 6px;
+    }
+
+    .card-header {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        font-size: 15px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    h6{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:375px){
+    .colorFooter{
+        height: 340px;
+        width: 100%;
+        background-color: var(--crema);
+    }
+
+    .logoFooter {
+        height: 70px;
+        width: 70px;
+        position:absolute;
+        margin-top: 0;
+        margin-inline-start: -30px;
+    }
+
+    .texto {
+        margin-bottom: 1px;
+        font-size: 12px;
+       
+    }
+
+    .iconos2{
+        margin-top: 70px;
+        padding: 6px;
+    }
+
+    .card-header {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+    }
+    h5{
+        font-size: 14px;
+    }
+    h6{
+        font-size: 12px;
+    }
+}

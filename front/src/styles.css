@@ -10,7 +10,7 @@
  --grisMasClaro:#e2e2e2;
 
 }
-.colorFooter{
+/*.colorFooter{
  background-color: #ded0b7;
  padding-bottom: 125px;
  
@@ -64,7 +64,7 @@ font-weight: 700;
 .tamanoFooter{
     height: 150px;
    
-}
+}*/
 .toast-warning{
  background-color:var(--grisclaro)
  
@@ -90,7 +90,7 @@ p{
     color: #a66e4c;
     font-size: 23px;
 }
-@media (min-width:1024px){
+/*@media (min-width:1024px){
     .logoFooter{
        position: absolute; 
        height:155px ;
@@ -120,4 +120,4 @@ p{
 
         
     }
-}
+}*/

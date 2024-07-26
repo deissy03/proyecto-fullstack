@@ -13,7 +13,7 @@ export class LoginService {
   toastrService = inject(ToastrService);
   router = inject(Router);
 
-  API_URL = 'http://localhost:3000/inicio-sesion';
+  API_URL = 'http://3.133.98.196:3000/inicio-sesion';
  //maneja inicio de sesion
   login(credential: Credential) {
     return this.httpClient.post(this.API_URL, credential);
