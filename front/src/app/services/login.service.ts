@@ -8,12 +8,13 @@ import { Credential } from '../interfaces/credential';
   providedIn: 'root',
 })
 export class LoginService {
-  constructor() {}
-  httpClient = inject(HttpClient);
+  constructor(private httpClient:HttpClient) {}
+  API_URL = "http://3.133.98.196:3000/inicio-sesion";
+ 
   toastrService = inject(ToastrService);
   router = inject(Router);
 
-  API_URL = 'http://3.133.98.196:3000/inicio-sesion';
+  
  //maneja inicio de sesion
   login(credential: Credential) {
     return this.httpClient.post(this.API_URL, credential);
