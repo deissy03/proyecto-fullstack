@@ -20,10 +20,6 @@
     height: 150px;
     width: 240px;
 }
-.logob{
-    height: 200px;
-    width: 240px;
-}
 .ingresa{
    
    margin-right: 700px;
@@ -51,3 +47,123 @@
     height: 90px;
     width: 80px;
 } 
+
+
+@media (max-width:768px){
+    .medios-de-pago{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 200px;
+        color: var(--cafeMedio);
+    }
+    .qr{
+        height: 100px;
+        width: 100px;
+        margin-left: 50px;
+    }
+    .qrnequi{
+        height: 115px;
+        width: 115px;
+        margin-left: 50px;
+    }
+    .logo{
+        height: 100px;
+        width: 150px;
+    }
+    .logobm{
+        height: 100px;
+        width: 170px;
+    }
+
+    h6{
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .ingresa{
+       
+        margin-right:60px;
+        color: var(--cafeMedio);
+        font-size: 25px;
+    }
+    .ingresa2{
+       
+        margin-right: 980px;
+         color: var(--cafeMedio);
+         font-size: 25px;
+     }
+    .container{
+        margin-bottom: 100px;
+    }
+    .WhatsApp1{
+        position: relative;
+        margin-left: 309px;
+        height: 150px;
+        width: 150px;
+     
+    } 
+    .iconos2{
+        height: 90px;
+        width: 80px;
+    }  
+}
+
+@media (max-width:375px){
+    .medios-de-pago{
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-left: 100px;
+        color: var(--cafeMedio);
+    }
+    .qr{
+        height: 80px;
+        width: 80px;
+        margin-left: 140px;
+    }
+    .qrnequi{
+        height: 85px;
+        width: 85px;
+        margin-left: 50px;
+    }
+    .logo{
+        height: 100px;
+        width: 100px;
+        margin-left: 120px;
+    }
+    .logobm{
+        height: 100px;
+        width: 170px;
+        margin-left: 100px;
+    }
+
+    h6{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .ingresa{
+       
+        margin-right:60px;
+        color: var(--cafeMedio);
+        font-size: 25px;
+    }
+    .ingresa2{
+       
+        margin-right: 980px;
+         color: var(--cafeMedio);
+         font-size: 25px;
+     }
+    .container{
+        margin-bottom: 100px;
+    }
+    .WhatsApp1{
+        position: relative;
+        margin-left: 280px;
+        height: 150px;
+        width: 150px;
+     
+    } 
+    .iconos2{
+        height: 90px;
+        width: 80px;
+    }  
+}

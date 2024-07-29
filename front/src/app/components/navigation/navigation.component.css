@@ -1,45 +1,60 @@
 .colorFondo{
- position: fixed;
- top:0;
- left: 0;
- width: 100%;
- height: 10%;
- z-index: 10;
- background-color: #ded0b7;
-
-}
-
-.colorTexto{
-    color: #422518;
-    font-family: "Caveat";
-    font-weight: 700;
-    font-style: normal;
-    font-size: 30px;
-}
-.navbar-brand{
-    padding-left: 20px;
-    padding-right: 50px;
-}
-
-.colorTexto2{
-    color: rgb(34, 31, 31);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 499;
-    font-size: 20px;
-    
-}
-.colorTexto2:hover{
- color: #422518;
- background-color: var(--grisMasClaro);
-}
-
-.colorItems:hover{
-    background-color:#ded0b7;
-}
-@media (max-width:375px) {
-.navbar-brand{
-     padding-left: 10px;
-     font-size: 25px;
-    }
+    position: fixed;
+    top:0;
+    width: 1900px;
+    height: 90px;
+    z-index: 10;
+    background-color: #ded0b7;
    
-}
+   }
+   
+   .colorTexto{
+       color: #422518;
+       font-family: "Caveat";
+       font-weight: 700;
+       font-style: normal;
+       font-size: 30px;
+   }
+   .navbar-brand{
+       padding-left: 100px;
+       padding-right: 100px;
+   }
+   .nav-item{
+       padding-right: 70px;
+   }
+   .colorTexto2{
+       color: rgb(34, 31, 31);
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: 499;
+       font-size: 20px;
+       
+   }
+   .colorTexto2:hover{
+    color: #422518;
+    background-color: var(--grisMasClaro);
+   }
+   
+   .colorItems:hover{
+       background-color:#ded0b7;
+   }
+   
+   @media (max-width:768px){
+       .colorFondo{
+           position: fixed;
+           top:0;
+           width: 100%;
+           max-height: 12%;
+           z-index: 10;
+           margin: 0;
+           padding: 0;
+           background-color: #ded0b7;
+          
+          } 
+   }
+   @media (max-width:375px) {
+   .navbar-brand{
+        padding-left: 10px;
+        font-size: 25px;
+       }
+      
+   }
