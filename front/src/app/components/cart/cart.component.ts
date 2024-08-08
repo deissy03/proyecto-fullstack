@@ -5,6 +5,11 @@ import { ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'ngx-localstorage';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Store, select } from '@ngrx/store';
+import { AppState } from '../../app.state';
+import { Product } from '../../carrito-ngrx/product.model';
+import { deleteProduct } from '../../carrito-ngrx/carrito.actions';
+
 @Component({
   selector: 'app-cart',
   standalone: true,
@@ -14,17 +19,27 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class CartComponent implements OnInit {
  productosSeleccionados:Ejemplo[]=[];
+ productsInCart:Product []=[];
  totalCompra:number =0;
  constructor(
   private activatedRoute: ActivatedRoute,
   private localStorageService: LocalStorageService,
   private router: Router,
   private toastr: ToastrService,
+  private store: Store <AppState>
  ){}
+ getProducts(){
+  this.store.pipe(select('cartProducts')).subscribe((products: Product[]) => {
+    this.productsInCart = products
+    console.log(products)
+  })
+}
  
 // implemnetamos la traida de los datos del modelo con ngOnInit, se crea una constante que se llame idproducto para que reciba los productos por su id y reciba un solo producto
  ngOnInit(){
-  const idProducto= this.activatedRoute.snapshot.queryParams["producto"];
+   const idProducto= this.activatedRoute.snapshot.queryParams["producto"];
+   
+
   //creamos un if que va a traer el id producto que verifica si existe un valor valido en el idproducto este id producto viene del modleo ejemplo que en este caso llammos productoSeleccionado 
    if(idProducto){
     const producto= this.productosSeleccionados.find(
@@ -46,6 +61,7 @@ export class CartComponent implements OnInit {
    }catch(error){
     console.log("error al cargar el carrito",error);
    }  
+   this.getProducts()
  }
  agregarProductoAlCarrito(producto:Ejemplo){
   this.productosSeleccionados.push(producto);
@@ -85,8 +101,11 @@ export class CartComponent implements OnInit {
  
 }
  calcularTotalCompra(){
-  this.totalCompra=this.productosSeleccionados.reduce((acomulador,producto)=>acomulador + producto.precio,0);
+  this.totalCompra=this.productsInCart.reduce((acomulador,producto)=>acomulador + producto.precio,0);
  }
- 
+ removeAProduct(id: string){
+  this.store.dispatch(deleteProduct({ProductId:id}))
+  this.getProducts()
+}
  }
 

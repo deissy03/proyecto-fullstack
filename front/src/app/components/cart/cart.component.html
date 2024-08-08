@@ -5,32 +5,34 @@
   </h1>        
 </div>
 <!--contenedor del carrito-->
+@if(productsInCart.length){
 <div class="container medida">
-<div class="row gap-5 ">
-  <div class="col " *ngFor="let item of productosSeleccionados; let i = index">
-    <img
-    src="http://3.133.98.196:3000/imagenes/{{ item.imagen }}"
-    class="card-img-top tamanoImagen borde"
-    alt="imagen de una {{ item.modelo }}"
-  />
-  <h5 class="card-title card-body">{{ item.marca }}</h5>
-  <p class="card-text card-body">Color: {{ item.color }}</p>
-  <h4 class="card-text card-precio">
-    Precio: {{ item.precio | currency : "COP" : "$" }}
-  </h4>
-  <button (click)="eliminarProductoDelCarrito(i)" class= "botoneliminar">Eliminar</button>
+  <div class="row gap-5 ">
+    
+      <div class="col " *ngFor="let item of productsInCart; let i = index">
+        <img src="http://localhost:3000/imagenes/{{ item.imagen }}"
+              class="card-img-top tamanoImagen     borde"
+              alt="imagen de una {{ item.modelo }}"/>
+              <h5 class="card-title card-body">{{ item.marca }}</h5>
+              <h4 class="card-text card-body">Color: {{ item.color }}</h4>
+              <h4 class="card-text card-precio">
+                Precio: {{ item.precio | currency : "COP" : "$" }}
+                </h4>
+        <button (click)="removeAProduct(item.id)" class= "botoneliminar">Eliminar</button>
+      </div>
+ 
+      <div class="col-md-auto">    
+      </div>
+      <div class="col col-lg-2">
+      </div>
   </div>
-  <div class="col-md-auto">    
-  </div>
-  <div class="col col-lg-2">
-  </div>
-</div>
 </div>
 <div class="total">
   <h3>Total: {{ totalCompra | currency : "COP" : "$" }}</h3>
 </div>
+}
 <div class="botones">  
   <button (click)="vaciarCarrito()"class= "botonvaciar">Vaciar carrito</button>
-  <button (click)="agregarCarrito()"class= "botonagregar">Agregar al Carrito</button>
+  <button (click)="agregarCarrito()"class= "botonagregar">Ir a los bolsos</button>
   <button (click)="comprar()"class= "botoncomprar">Comprar</button>
 </div>

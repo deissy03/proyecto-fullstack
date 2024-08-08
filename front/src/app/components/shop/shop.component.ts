@@ -6,6 +6,10 @@ import { ToastrService } from 'ngx-toastr';
 import { LoginService } from '../../services/login.service';
 import { Ejemplo } from '../../model/ejemplo';
 import { LocalStorageService } from 'ngx-localstorage'; 
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { addProduct } from '../../carrito-ngrx/carrito.actions';
+import { Product } from '../../carrito-ngrx/product.model';
 
 @Component({
   selector: 'app-shop',
@@ -13,38 +17,34 @@ import { LocalStorageService } from 'ngx-localstorage';
   imports: [CommonModule, RouterOutlet],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css',
+
+ 
 })
 export class ShopComponent {
+
   toastrService = inject(ToastrService);
   loginService = inject(LoginService);
  
 
   name: string = '';
-  // productos: any[] = [];
-  // modelo: string = '';
-  // marca: string = '';
-  // material: string = '';
-  // precio: number = 0;
-  // color: string = '';
-  // disponibilidad: boolean = true;
-  // fechaIngreso: Date = new Date();
-  // imagen: File | null = null;
+
    
   productos:Ejemplo[]=[];
   totalCompra:number=0;
   constructor(
+    private store: Store, 
     private dataService:DataService,
     private localStorageService: LocalStorageService,
     private router:Router
   ){}
-
+ 
   async ngOnInit() {
     const token: any = localStorage.getItem('token');
     if (token) {
       this.loginService.validateToken(token).subscribe((response: any) => {
         if (response.resultado === 'bien') {
           this.name = response.datos.name;
-          this.toastrService.success(`Hello, ${this.name}!`);
+           this.toastrService.success(`Hello, ${this.name}!`);
         } else {
           this.loginService.logout();
         }
@@ -61,7 +61,15 @@ export class ShopComponent {
     this.totalCompra +=producto.precio;
   }
   addProduct(product:Ejemplo){
-    console.log(product);
+    const productoNgrx :Product = {
+      id: product._id,
+      modelo: product.modelo,
+      precio:product.precio,
+      imagen:product.imagen,
+      color:product.color,
+      marca:product.marca
+    }
+     
     let productosGuardados: Ejemplo[]| null= this.localStorageService.get("carrito");
     if(productosGuardados){
       productosGuardados.push(product);
@@ -71,5 +79,8 @@ export class ShopComponent {
     }
     this.localStorageService.set('carrito', productosGuardados);
     this.router.navigate(['cart']);
+
+    this.store.dispatch(addProduct({product:productoNgrx}))
   }
+  
 }

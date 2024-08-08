@@ -37,7 +37,20 @@
    .colorItems:hover{
        background-color:#ded0b7;
    }
-   
+   button{
+    font-size: 30px;
+    margin-left:150px ;
+   }
+   .btn{
+    font-size: 20px;
+    color: black;
+   }
+   .carritoFlotante{
+    position: absolute;
+    top: 90px;
+    right: 20px;
+  
+   }
    @media (max-width:768px){
        .colorFondo{
            position: fixed;
