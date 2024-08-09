@@ -16,7 +16,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
    
     provideStore(),
-    provideState({name: 'cartProducts', reducer: carritoReducer}),
+    provideState({name: 'cartState', reducer: carritoReducer}),
     provideEffects(),
     provideStoreDevtools({ maxAge: 25, logOnly: false }),
     provideRouter(routes),

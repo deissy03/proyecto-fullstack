@@ -18,7 +18,7 @@
               <h4 class="card-text card-precio">
                 Precio: {{ item.precio | currency : "COP" : "$" }}
                 </h4>
-        <button (click)="removeAProduct(item.id)" class= "botoneliminar">Eliminar</button>
+        <button (click)="removeAProduct(i, item.precio)" class= "botoneliminar">Eliminar</button>
       </div>
  
       <div class="col-md-auto">    
@@ -28,11 +28,11 @@
   </div>
 </div>
 <div class="total">
-  <h3>Total: {{ totalCompra | currency : "COP" : "$" }}</h3>
+  <h3>Total: {{ totalCarrito | currency : "COP" : "$" }}</h3>
 </div>
 }
 <div class="botones">  
-  <button (click)="vaciarCarrito()"class= "botonvaciar">Vaciar carrito</button>
+  <button (click)="vaciarCarro()"class= "botonvaciar">Vaciar carrito</button>
   <button (click)="agregarCarrito()"class= "botonagregar">Ir a los bolsos</button>
   <button (click)="comprar()"class= "botoncomprar">Comprar</button>
 </div>

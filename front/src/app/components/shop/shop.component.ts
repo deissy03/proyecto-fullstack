@@ -27,7 +27,7 @@ export class ShopComponent {
  
 
   name: string = '';
-
+ 
    
   productos:Ejemplo[]=[];
   totalCompra:number=0;
@@ -40,11 +40,17 @@ export class ShopComponent {
  
   async ngOnInit() {
     const token: any = localStorage.getItem('token');
+    
     if (token) {
       this.loginService.validateToken(token).subscribe((response: any) => {
-        if (response.resultado === 'bien') {
+        if (response.resultado === 'bien' ) {
           this.name = response.datos.name;
-           this.toastrService.success(`Hello, ${this.name}!`);
+      
+          if(localStorage.getItem("yaSeMostro")!== "si"){
+            localStorage.setItem("yaSeMostro","si")
+            this.toastrService.success(`Hello, ${this.name}!`); 
+          }
+          
         } else {
           this.loginService.logout();
         }

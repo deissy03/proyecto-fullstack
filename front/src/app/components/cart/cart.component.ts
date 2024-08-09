@@ -8,7 +8,8 @@ import { ToastrService } from 'ngx-toastr';
 import { Store, select } from '@ngrx/store';
 import { AppState } from '../../app.state';
 import { Product } from '../../carrito-ngrx/product.model';
-import { deleteProduct } from '../../carrito-ngrx/carrito.actions';
+import { deleteProduct, emptyCart } from '../../carrito-ngrx/carrito.actions';
+import { CartState } from '../../carrito-ngrx/carrito.reducer';
 
 @Component({
   selector: 'app-cart',
@@ -20,6 +21,7 @@ import { deleteProduct } from '../../carrito-ngrx/carrito.actions';
 export class CartComponent implements OnInit {
  productosSeleccionados:Ejemplo[]=[];
  productsInCart:Product []=[];
+ totalCarrito: number=0 ;
  totalCompra:number =0;
  constructor(
   private activatedRoute: ActivatedRoute,
@@ -29,9 +31,10 @@ export class CartComponent implements OnInit {
   private store: Store <AppState>
  ){}
  getProducts(){
-  this.store.pipe(select('cartProducts')).subscribe((products: Product[]) => {
-    this.productsInCart = products
-    console.log(products)
+  this.store.pipe(select('cartState')).subscribe((cartState: CartState) => {
+    this.productsInCart = cartState.products
+    this.totalCarrito = cartState.grandTotal
+    console.log(cartState.products)
   })
 }
  
@@ -96,16 +99,19 @@ export class CartComponent implements OnInit {
 }
  comprar(){
   this.router.navigate(['/comprar']);
-  this.toastr.success('¡Compra exitosa!', 'BOLSOS_JEZE');
+  // this.toastr.success('¡Compra exitosa!', 'BOLSOS_JEZE');
   return this.vaciarCarrito();
  
 }
  calcularTotalCompra(){
   this.totalCompra=this.productsInCart.reduce((acomulador,producto)=>acomulador + producto.precio,0);
  }
- removeAProduct(id: string){
-  this.store.dispatch(deleteProduct({ProductId:id}))
+ removeAProduct(index: number, precio:number){
+  this.store.dispatch(deleteProduct({ProductIndex:index, precio}))
   this.getProducts()
 }
+ vaciarCarro(){
+  this.store.dispatch(emptyCart())
+ }
  }
 

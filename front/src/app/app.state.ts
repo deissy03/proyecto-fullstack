@@ -1,5 +1,5 @@
-import { Product } from "./carrito-ngrx/product.model";
+import { CartState } from "./carrito-ngrx/carrito.reducer";
 
 export interface AppState {
- readonly cartProducts: Product[];
+ readonly cartState: CartState;
 }

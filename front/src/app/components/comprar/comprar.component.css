@@ -12,6 +12,15 @@
     height: 220px;
     width: 220px;
 }
+.qrBancolombia{
+    height: 220px;
+    width: 220px;
+}
+.logo1{
+    height: 150px;
+    width: 200px; 
+ 
+}
 .logo{
     height: 150px;
     width: 200px;
@@ -59,12 +68,22 @@
     .qr{
         height: 100px;
         width: 100px;
-        margin-left: 50px;
+        margin-left: 10px;
     }
     .qrnequi{
         height: 115px;
         width: 115px;
-        margin-left: 50px;
+        margin-left: 10px;
+    }
+    .qrBancolombia{
+        height: 105px;
+        width: 105px;
+        margin-left: 20px;  
+    }
+    .logo1{
+        height: 100px;
+        width: 190px; 
+     
     }
     .logo{
         height: 100px;
@@ -109,8 +128,8 @@
 
 @media (max-width:375px){
     .medios-de-pago{
-        margin-top: 80px;
-        margin-bottom: 80px;
+        margin-top: 160px;
+        margin-bottom: 50px;
         margin-left: 100px;
         color: var(--cafeMedio);
     }
@@ -122,17 +141,28 @@
     .qrnequi{
         height: 85px;
         width: 85px;
-        margin-left: 50px;
+        margin-left: 20px;
+    }
+    .qrBancolombia{
+        height: 75px;
+        width: 75px;
+        margin-left: 20px;  
     }
     .logo{
+        height: 85px;
+        width: 85px;
+        margin-left: 140px;
+    }
+    .logo1{
         height: 100px;
-        width: 100px;
-        margin-left: 120px;
+        width: 190px; 
+        margin-left:80px;
+        
     }
     .logobm{
-        height: 100px;
-        width: 170px;
-        margin-left: 100px;
+        height: 90px;
+        width: 120px;
+        margin-left: 115px;
     }
 
     h6{
@@ -142,25 +172,24 @@
     }
     .ingresa{
        
-        margin-right:60px;
+        margin-right:10px;
         color: var(--cafeMedio);
-        font-size: 25px;
+        font-size: 20px;
     }
     .ingresa2{
        
         margin-right: 980px;
          color: var(--cafeMedio);
-         font-size: 25px;
+         font-size: 20px;
      }
     .container{
         margin-bottom: 100px;
     }
     .WhatsApp1{
         position: relative;
-        margin-left: 280px;
+        margin-left: 120px;
         height: 150px;
         width: 150px;
-     
     } 
     .iconos2{
         height: 90px;

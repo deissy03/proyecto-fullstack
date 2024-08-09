@@ -50,4 +50,7 @@ export class LoginComponent {
       this.toastrService.warning('All fields are required');
     }
   }
+  ngOnInit (){
+    localStorage.removeItem("yaSeMostro")
+  }
 }

@@ -1,73 +1,45 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LoginService } from '../../services/login.service';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Product } from '../../carrito-ngrx/product.model';
-import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { AppState } from '../../app.state';
-// import { CarritoState } from '../../carrito-ngrx/carrito.reducer';
-
+import { AppState } from '../../app.state'; 
+import { CartState } from '../../carrito-ngrx/carrito.reducer'; 
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [RouterLink,CommonModule],
-   templateUrl: './navigation.component.html',
-   styleUrl: './navigation.component.css',
-   template: `
-  <div>
-    <h2>Carrito</h2>
-    <ul>
-      <li *ngFor="let producto of productos$ | async">
-        {{ producto.producto }} - {{ producto.cantidad }} - {{ producto.precio }}
-        <button (click)="addProduct(producto)">carrito</button>
-      </li>
-    </ul>
-  </div>
-`
+  imports: [RouterLink, CommonModule],
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.css']
 })
+export class NavigationComponent implements OnInit {
+  productsInCart$: Observable<Product[]>; // Usamos Observable en lugar de array directamente
+  productsInCart: Product[] = [];
 
-
-export class NavigationComponent {
-  productsInCart: Product[] = []
-  constructor(private store: Store<AppState>) {}
-  
-  // fetch products from STATE
-  getProducts(){
-    this.store.pipe(select('cartProducts')).subscribe((products: Product[]) => {
-      this.productsInCart = products
-      console.log(products)
-    })
-
+  constructor(private store: Store<AppState>, private router: Router) {
+    // Aquí se define el observable para el estado del carrito
+    this.productsInCart$ = this.store.pipe(select(state => state.cartState.products));
   }
+
   ngOnInit() {
-    this.getProducts()
+     this.productsInCart$.subscribe(products => {
+      this.productsInCart = products;
+    });
   }
-
-
-
-
-  // loginService = inject(LoginService);
-  //   productos$: Observable<Product[]>;
-  //   private store = inject(Store<{ product: { productos: Product[] } }>);
-     private router = inject(Router);
-  //   constructor() {
-  //    this.productos$ = this.store.select('carrito');
-  //  }
-  //  get productCount$(): Observable<number> {
-  //   return this.productos$.pipe(
-  //     map(products => products.length)
-  //   );
-  // }
-    
-  //  ngOnInit(){
-  //    console.log(this.productos$)
-  //  }
-  // navigateToCart() {
-  //   this.router.navigate(['/cart']);
-  //   }
+  addProduct(product: Product) {
+    // Implementa la lógica para agregar el producto al carrito
+    console.log('Adding product:', product);
+    // Aquí podrías despachar una acción NgRx si es necesario
+  }
 }
+
+
+
+
+
+
+
