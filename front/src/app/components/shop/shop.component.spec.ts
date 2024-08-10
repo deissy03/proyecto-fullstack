@@ -58,15 +58,15 @@ describe('ShopComponent', () => {
   });
  // prueba la validación del token e inicialización verifica que el nombre del usuario se configura correctamente y que los productos se cargan
   it('should validate token and set user name on init', waitForAsync(() => {
-    const mockTokenResponse = { resultado: 'bien', datos: { name: 'John Doe' } };
+    const mockTokenResponse = { resultado: 'bien', datos: { name: 'deisy esquivia' } };
     const mockProductos: Ejemplo[] = [
       {
         _id: '1',
-        modelo: 'XYZ',
-        marca: 'Brand',
-        material: 'Leather',
-        precio: 100,
-        color: 'Red',
+        modelo: 'bolso',
+        marca: 'Louis Vuiton',
+        material: 'cuero',
+        precio: 100000,
+        color: 'negro',
         disponibilidad: true,
         fechaIngreso: new Date(),
         imagen: 'image.jpg',
@@ -82,7 +82,7 @@ describe('ShopComponent', () => {
     fixture.detectChanges();
 
     fixture.whenStable().then(() => {
-      expect(component.name).toBe('John Doe');
+      expect(component.name).toBe('deisy esquivia');
       expect(component.productos.length).toBe(1);
     });
   }));
@@ -91,11 +91,11 @@ describe('ShopComponent', () => {
   it('should add product to the cart and store it in localStorage', () => {
     const mockProduct: Ejemplo = {
       _id: '1',
-      modelo: 'XYZ',
-      marca: 'Brand',
+      modelo: 'bolso',
+      marca: 'Louis Vuitton',
       material: 'Leather',
-      precio: 100,
-      color: 'Red',
+      precio: 100000,
+      color: 'negro',
       disponibilidad: true,
       fechaIngreso: new Date(),
       imagen: 'image.jpg',
@@ -105,11 +105,11 @@ describe('ShopComponent', () => {
 
     const mockNgrxProduct: Product = {
       id: '1',
-      modelo: 'XYZ',
-      precio: 100,
+      modelo: 'bolso',
+      precio: 100000,
       imagen: 'image.jpg',
-      color: 'Red',
-      marca: 'Brand'
+      color: 'negro',
+      marca: 'Louis Vuitton'
     };
 
     localStorageService.get.and.returnValue(null);
@@ -129,12 +129,12 @@ describe('ShopComponent', () => {
       return null;
     });
 
-    const mockTokenResponse = { resultado: 'bien', datos: { name: 'John Doe' } };
+    const mockTokenResponse = { resultado: 'bien', datos: { name: 'deisy esquivia' } };
     loginService.validateToken.and.returnValue(of(mockTokenResponse));
 
     fixture.detectChanges();
 
-    expect(toastrService.success).toHaveBeenCalledWith('Hello, John Doe!');
+    expect(toastrService.success).toHaveBeenCalledWith('Hello, deisy esquivia!');
   });
 
   
