@@ -103,6 +103,7 @@ export class CartComponent implements OnInit {
   return this.vaciarCarrito();
  
 }
+
  calcularTotalCompra(){
   this.totalCompra=this.productsInCart.reduce((acomulador,producto)=>acomulador + producto.precio,0);
  }

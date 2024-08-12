@@ -46,7 +46,12 @@ h6{
         position:absolute;
         margin-top: 10px;
         margin-inline-start: 90px;
+        
     } 
+    .copy{
+        margin-top: 70px;
+    }
+    
     .colorFondo{
         margin: 0;
         background-color: var(--crema);
