@@ -55,7 +55,8 @@
         padding-bottom: 30px;  
      }
      h1{
-         font-size: 15px;
+         font-size: 10px;
+         color:var(--crema);
      }
      h2{
          font-size: 14px;
