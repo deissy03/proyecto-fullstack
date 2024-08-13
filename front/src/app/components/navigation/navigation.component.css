@@ -63,11 +63,21 @@
            background-color: #ded0b7;
           
           } 
+          .menuTamano{
+            font-size: 20px;
+            position: relative;
+            right:90px;
+            
+          }
    }
    @media (max-width:375px) {
    .navbar-brand{
         padding-left: 10px;
         font-size: 25px;
        }
+      .menuTamano{
+        font-size: 15px;
+        
+      }
       
    }

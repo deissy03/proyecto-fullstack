@@ -10,61 +10,9 @@
  --grisMasClaro:#e2e2e2;
 
 }
-/*.colorFooter{
- background-color: #ded0b7;
- padding-bottom: 125px;
- 
-  
-}
-.colorTextoF{
-color: black;
-font-family: "Caveat";
-font-weight: 700;
- font-style: normal;
-
-}
-.card-header{
-    color: #0c0c0c;
-    font-size: 16px;
-
-}
-.blockquote-footer{
-    color:#a66e4c;
-    font-size: 20px;
-}
-.logoFooter {
-    height: 160px;
-    width: 150px; 
-    margin-left: 1610px;
-    margin-top: 80px;
-    
-}
-.textofooter {
-    color:#a66e4c;
-    font-size: 20px; 
-}
-.titulo{
-    margin-left: 1500px; 
-    color:#a66e4c;
-    font-size: 30px; 
-    margin-bottom: 10px;
-
-}
-.iconos2{
-    height: 30px;
-    width: 30px;
-    margin: 25px;
-    margin-bottom: 200px;
-}   
-
-.texto{
-    font-size:22px ;
-    margin-top: 0;
-}
-.tamanoFooter{
-    height: 150px;
-   
-}*/
+.body{
+    background-color: var(--grisFondo);
+} 
 .toast-warning{
  background-color:var(--grisclaro)
  
