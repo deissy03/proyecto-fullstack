@@ -52,5 +52,6 @@ export class LoginComponent {
   }
   ngOnInit (){
     localStorage.removeItem("yaSeMostro")
+   
   }
 }
