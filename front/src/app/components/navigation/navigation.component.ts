@@ -20,6 +20,7 @@ export class NavigationComponent implements OnInit {
   productsInCart$: Observable<Product[]>; // Usamos Observable en lugar de array directamente
   productsInCart: Product[] = [];
   
+  //rura del carrito ngrx
   rutaActual:string=""
 
   constructor(private store: Store<AppState>) {
@@ -32,15 +33,16 @@ export class NavigationComponent implements OnInit {
       this.productsInCart = products;
      
     });
-   
+   //ruta para q no se vea el carrito en otros componentes
   this.ObtenerRuta()
   
   }
   addProduct(product: Product) {
     // Implementa la lógica para agregar el producto al carrito
     console.log('Adding product:', product);
-    // Aquí podrías despachar una acción NgRx si es necesario
+    
   }
+   //ruta para q no se vea el carrito en otros componentes
   ObtenerRuta(){
     console.log(this.router.url)
     this.rutaActual = this.router.url
