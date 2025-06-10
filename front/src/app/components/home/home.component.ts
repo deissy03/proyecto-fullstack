@@ -19,10 +19,9 @@ export class HomeComponent implements OnInit {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      const currentUrl = this.router.url.split('?')[0];
-      console.log('Current URL:', currentUrl);
-      this.showCart = !(currentUrl === '/login' || currentUrl === '/create' || currentUrl === '/home');});
-  }
+    
+})
+}
 }
 
  
